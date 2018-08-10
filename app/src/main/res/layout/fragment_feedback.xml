@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/kenimage"
+    tools:context="com.example.touchstone.ngo.Feedback">
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+       >
+        <EditText
+            android:id="@+id/etTO"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:background="@android:color/darker_gray"
+            android:text="sahilkaushal3@gmail.com"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/feedback_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="15dp"
+            android:text="@string/feedback"
+            android:textColor="@color/lightblack"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/subject_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+
+            android:layout_margin="20dp"
+            android:hint="Subject"
+            android:paddingLeft="15dp"
+            android:textColorHint="#000000"
+            android:textSize="15dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/feedback_edit_text"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_margin="15dp"
+
+            android:gravity="top"
+            android:textColorHint="#000000"
+            android:hint="Type your Feedback here"
+            android:paddingLeft="15dp"
+            android:textSize="15dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+          android:id="@+id/feedback_snd_btn"
+            android:layout_gravity="bottom"
+            android:layout_margin="15dp"
+            android:background="@color/colorFAB"
+            android:text="SEND"
+            android:textColor="#ffffff"
+            android:textSize="15dp"/>
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

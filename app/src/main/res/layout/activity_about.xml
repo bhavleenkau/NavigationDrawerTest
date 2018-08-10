@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#303030"
+                tools:context="navdrawer.test.com.navigationdrawertest.AboutActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+            <LinearLayout
+                android:id="@+id/aboutitem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/applogo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:src="@mipmap/ic_launcher_app_logo"/>
+
+                <TextView
+                    android:id="@+id/appnameabout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/applogo"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center_horizontal"
+                    android:text="Angel's-World"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appnameabout"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/appversion"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp"
+                    android:id="@+id/version"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutitem"
+                android:layout_marginTop="30dp"
+                android:id="@+id/expandablelayout">
+                <Button
+                    android:id="@+id/expandableButton0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:onClick="expandableButton0"
+                    android:paddingRight="10dp"
+                    android:text="Official Website"
+                    android:textColor="#C0C0C0"
+                    android:textSize="10dp"/>
+
+                <Button
+                    android:id="@+id/expandableButton1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:onClick="expandableButton1"
+                    android:paddingRight="10dp"
+                    android:layout_marginTop="35dp"
+                    android:text="Our Mission/Vision"
+                    android:textColor="#C0C0C0"
+                    android:textSize="10dp"/>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/expandableButton1"
+                    android:background="#303030"
+                    android:padding="16dp"
+                    app:ael_duration="400"
+                    app:ael_expanded="false"
+                    app:ael_interpolator="linear"
+                    app:ael_orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="It’s more than a cause—it’s a calling. We always act in the public interest, even when it means going against convention. We always do the right thing, even when it’s unpopular. We do it because we believe that the Internet is a transformational force for change that must never be compromised. We do it by collaborating globally in a multi-stakeholder governance model that ensures bottom-up consensus. We do it because we are an essential building block in the foundation of an Internet for all. We are a small organization, operating huge domains that the world counts on to be platforms for the public interest."
+                        android:textColor="#fff"/>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                <Button
+                    android:id="@+id/expandableButton2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/expandableLayout1"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:onClick="expandableButton2"
+                    android:paddingRight="10dp"
+                    android:text="What we do"
+                    android:textColor="#C0C0C0"
+                    android:textSize="10dp"/>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/expandableButton2"
+                    android:background="#303030"
+                    android:padding="16dp"
+                    app:ael_duration="400"
+                    app:ael_expanded="false"
+                    app:ael_interpolator="linear"
+                    app:ael_orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Angel’s World is a social enterprise and online initiative with the goal of increasing the sustainability of NGOs across the world. We accomplish this by providing online resources for NGOs to increase their awareness and access to donors, resources, and skills. We use technology to spread knowledge from our experienced fundraising experts to NGOs around the world and increase their capacity.
+Angel’s World is not a funding organization. We do not provide grants. We also do not fundraise or write proposals, but provide the resources NGOs need to learn how to provide these services themselves.
+Angel’s World believes that no intervention can be successful unless the implementing organization has sustainable resources to work over a longer period of time. By presenting funding opportunities from around the world and providing tools supporting organizational growth, we hope to play our part in creating a better world.
+"
+                        android:textColor="#fff"/>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                <Button
+                    android:id="@+id/expandableButton3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/expandableLayout2"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:onClick="expandableButton3"
+                    android:paddingRight="10dp"
+                    android:text="Why we do"
+                    android:textColor="#C0C0C0"
+                    android:textSize="10dp"/>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/expandableButton3"
+                    android:background="#303030"
+                    android:padding="16dp"
+                    app:ael_duration="400"
+                    app:ael_expanded="false"
+                    app:ael_interpolator="linear"
+                    app:ael_orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NGOs around the world face unique challenges in attracting and maintaining resources for their programs. Although development funding has multi-billion dollar annual disbursements, many barriers prevent NGOs from successfully vying for these funds. Announcements of funding competitions are fragmented all over the web and difficult to identify; competition is tough and the application process arduous; and many NGOs simply do not have the capacity or technical know-how to effectively go after funding opportunities. These challenges can be especially pronounced for newly formed NGOs, grassroots NGOs, and NGOs from the developing world. So how can NGOs spend less time worrying about fundraising and more time changing the world?
+This was the founding concept for Angel’s World – to help reduce fundraising barriers for NGOs and practitioners at all levels, sizes, and sophistication."
+                        android:textColor="#fff"/>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                <Button
+                    android:id="@+id/expandableButton4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/expandableLayout3"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:onClick="expandableButton4"
+                    android:paddingRight="10dp"
+                    android:text="Who we serve"
+                    android:textColor="#C0C0C0"
+                    android:textSize="10dp"/>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/expandableButton4"
+                    android:background="#303030"
+                    android:padding="16dp"
+                    app:ael_duration="400"
+                    app:ael_expanded="false"
+                    app:ael_interpolator="linear"
+                    app:ael_orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="For the billions of people we serve, we empower other people’s voices and we love to hear them tell their stories. As long as we are here, the global community will have a platform to define their identities, and will be as it was always meant to be: connected and open.
+Our team is spread across the globe. At any given moment, you will undoubtedly find us traveling around the world attending conferences and exhibitions, or meeting with our registrars. Many of us are expert speakers and we’re always happy to share what we know and talk about what we don’t."
+                        android:textColor="#fff"/>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

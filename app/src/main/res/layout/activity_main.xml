@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="navdrawer.test.com.navigationdrawertest.HomeActivity">
+
+    <!-- As the main content view, the view below consumes the entire
+      space available using match_parent in both dimensions. -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+    </FrameLayout>
+
+    <include
+
+        layout="@layout/activity_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <include
+        layout="@layout/fab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!-- The drawer is given a fixed width in dp and extends the full height of
+       the container. -->
+    <fragment
+        android:id="@+id/navigation_drawer"
+        android:name="navdrawer.test.com.navigationdrawertest.fragment.NavigationDrawerFragment"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginTop="?attr/actionBarSize"
+        tools:layout="@layout/drawer_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

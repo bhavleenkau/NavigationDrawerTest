@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/homelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    android:layout_below="@+id/toolbar">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/kenimage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher_app_logo"/>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kenimage"
+                android:hapticFeedbackEnabled="true"
+                app:tabGravity="fill"
+                app:tabPaddingStart="10dp"
+                app:tabPaddingEnd="10dp"
+                android:background="@color/secondary_color"
+                app:tabMode="scrollable"
+                app:tabTextColor="#000000"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/kenimage"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</RelativeLayout>
